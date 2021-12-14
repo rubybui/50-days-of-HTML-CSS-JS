@@ -113,10 +113,18 @@ h1 {
 .hover-left .left {
   width: var(--hover-width);
 }
+.hover-left .right-container {
+    transform: rotate(-90deg) ;
 
+}
+.hover-left .right-container h1{
+  transform: translate(-700px,-75px);
+}
+.hover-left .right-container a{
+  transform: translate(-260px,-30px);
+}
 .hover-left .right {
   width: var(--other-width);
-
 }
 
 .hover-right .right {
@@ -125,6 +133,16 @@ h1 {
 
 .hover-right .left {
   width: var(--other-width);
+}
+.hover-right .left-container {
+    transform: rotate(-90deg);
+}
+
+.hover-right .left-container h1{
+  transform: translate(-700px,-75px);
+}
+.hover-right .left-container a{
+  transform: translate(-260px,-30px);
 }
 
 @media (max-width: 800px) {
