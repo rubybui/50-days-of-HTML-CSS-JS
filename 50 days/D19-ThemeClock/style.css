@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Heebo:300&display=swap');
 
-*{
+* {
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --primary-color: #000;
-    --secondary-color:#fff;
-}
-html {
-    transition:  all 0.5s ease-in;
+    --secondary-color: #fff;
 }
 
-html.dark{
-    --primary-color:#fff;
-    --secondary-color:#000;
+html {
+    transition: all 0.5s ease-in;
+}
+
+html.dark {
+    --primary-color: #fff;
+    --secondary-color: #000;
     background-color: #111;
     color: var(--primary-color)
 }
@@ -29,7 +30,7 @@ body {
     margin: 0;
 }
 
-.toggle{
+.toggle {
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border: 0;
@@ -39,27 +40,27 @@ body {
     top: 10%;
 }
 
-.toggle:focus{
+.toggle:focus {
     outline: none;
 }
 
-.clock-container{
+.clock-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 
-.clock{
+.clock {
     position: relative;
     width: 200px;
     height: 200px;
     background-color: var(--secondary-color);
 }
 
-.needle{
+.needle {
     background-color: var(--primary-color);
-    position:absolute;
+    position: absolute;
     top: 50%;
     left: 50%;
     height: 65px;
@@ -68,49 +69,49 @@ body {
     transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
 }
 
-.needle.hour{
-    transform: translate(-50%,-100%) rotate(360deg);
+.needle.hour {
+    transform: translate(-50%, -100%) rotate(360deg);
 }
 
-.needle.minute{
-    transform: translate(-50%,-100%) rotate(360deg);
+.needle.minute {
+    transform: translate(-50%, -100%) rotate(360deg);
     height: 100px;
 }
 
-.needle.second{
-    transform: translate(-50%,-100%) rotate(360deg);
+.needle.second {
+    transform: translate(-50%, -100%) rotate(360deg);
     background-color: red;
     height: 100px;
 }
 
-.center-point{
+.center-point {
     background-color: red;
-    width:10px;
+    width: 10px;
     height: 10px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
 }
 
-.center-point::after{
+.center-point::after {
     content: "";
-    background-color:var(--primary-color);
-    width:4px;
+    background-color: var(--primary-color);
+    width: 4px;
     height: 4px;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
 }
 
-.time{
+.time {
     font-size: 60px;
 }
 
-.date{
+.date {
     color: #aaa;
     font-size: 14px;
     letter-spacing: 0.3px;
@@ -129,4 +130,39 @@ body {
     line-height: 18px;
 
     font-size: 12px;
+}
+
+
+.create-alarm {
+    margin-top: 20px;
+    display: none;
+}
+
+.alarm-inputs,
+#alarm-text {
+    margin-bottom: 30px;
+}
+
+#active-alarm {
+    display: none;
+}
+
+form > button {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    display: block;
+    margin: auto;
+    width: 50%;
+}
+
+#header {
+    padding-top: 20px;
+    text-align: center;
+}
+input[type=number], select{
+    width: 50px;
+    height:20px;
 }

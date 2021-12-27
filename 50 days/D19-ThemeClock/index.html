@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charsets="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <link rel="stylesheet" href="style.css"/>
-        <title> Alarm </title>
-    </head>
-    <body>
-        <button class="toggle">Dark Mode</button>
-        <div class="clock-container">
-            <div class="clock">
-                <div class="needle hour"></div>
-                <div class="needle minute"></div>
-                <div class="needle second"></div>
-                <div class="center-point"></div>
-            </div>
-            <div class="time"></div>
-            <div class="date"></div>
+
+<head>
+    <meta charsets="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title> Alarm </title>
+</head>
+
+<body>
+    <button class="toggle">Dark Mode</button>
+    <div class="clock-container">
+        <div class="clock">
+            <div class="needle hour"></div>
+            <div class="needle minute"></div>
+            <div class="needle second"></div>
+            <div class="center-point"></div>
         </div>
-        <script src="script.js"></script>
-    </body>
+        <div class="time"></div>
+        <div class="date"></div>
+        <div class="alarm-container">
+            <div id="header">Set Alarm</div>
+            <form class="time-setter">
+                <input type="number" name="hour" id="hour" min="0" max="11">
+                <input type="number" name="min" id="minute" min="0" max="59">
+                <input type="number" name="sec" id="second" min="0" max="59"></input>
+                <select name="zone">
+                    <option value="AM">AM</option>
+                    <option value="PM">PM</option>
+                </select>
+                <button class="submit">Submit</button>
+                 <!-- button is an inline element  -->
+            </form>
+        </div>
+        <div id="active-alarm">
+            <div id="alarm-text"></div>
+            <button id="clear-alarm">Clear Alarm</button>
+        </div>
+        <audio id="alarm-audio"></audio>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
 </html>
